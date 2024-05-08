@@ -380,6 +380,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     _extendsLinkTouchArea = NO;
     _longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(longPressGestureDidFire:)];
+    _longPressGestureRecognizer.cancelsTouchesInView = NO;
     self.longPressGestureRecognizer.delegate = self;
     [self addGestureRecognizer:self.longPressGestureRecognizer];
 }
